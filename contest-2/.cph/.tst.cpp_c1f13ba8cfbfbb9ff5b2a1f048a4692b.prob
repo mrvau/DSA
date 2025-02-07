@@ -1,0 +1,1 @@
+{"name":"Local: tst","url":"/home/mr_vau/Desktop/DSA/contest-2/tst.cpp","tests":[{"id":1738335109172,"input":"1\n20\n3 4 5 5 7 7 7 8 9 9 10 11 15 16 16 17 18 19 19 20 ","output":"6\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/mr_vau/Desktop/DSA/contest-2/tst.cpp","group":"local","local":true}
