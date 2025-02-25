@@ -1,10 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-vector<vector<pair<int, int>>> lists(1e5);
-vector<int> parent(1e5, -1);
-vector<int> dis(1e5, INT_MAX);
 
-void dijkstra(int src)
+void dijkstra(int src,vector<vector<pair<int, int>>> lists,vector<int> &parent,vector<int> &dis)
 {
   priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> q;
   dis[src] = 0;
@@ -34,6 +31,10 @@ int main()
 {
   int n, e;
   cin >> n >> e;
+  vector<vector<pair<int, int>>> lists(n + 1);
+  vector<int> parent(n + 1, -1);
+  vector<int> dis(n + 1, INT_MAX);
+  
   while (e--)
   {
     int a, b, c;
@@ -42,7 +43,9 @@ int main()
     lists[b].push_back({a, c});
   }
 
-  dijkstra(1);
+  
+
+  dijkstra(1, lists, parent, dis);
   if (dis[n] != INT_MAX)
   {
     vector<int> path;
@@ -51,7 +54,7 @@ int main()
     {
       if (d == 1)
       {
-        cout << d << " ";
+        path.push_back(d);
         break;
       }
       path.push_back(d);
