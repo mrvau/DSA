@@ -13,7 +13,7 @@ class cmp
     }
 };
 
-void bfs(int src)
+void dijkstra(int src)
 {
   priority_queue<pair<int, int>, vector<pair<int, int>>, cmp> q;
   dis[src] = 0;
@@ -47,6 +47,6 @@ int main()
   }
   int src, dst;
   cin >> src >> dst;
-  bfs(src);
+  dijkstra(src);
   return 0;
 }
